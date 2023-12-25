@@ -111,18 +111,6 @@ impl Vehicule {
         None
     }
 
-    pub fn update_maintenance_item(&mut self, item: &MaintenanceItem) -> bool {
-        let mut result = false;
-        if self.maintenance_items.contains_key(&item.id) {
-            let item_for_update = self.maintenance_items.get_mut(&item.id).unwrap();
-            item_for_update.copy(item);
-
-            result = true;
-        }
-
-        result
-    }
-
     pub fn get_label(&self) -> &str {
         &self.label
     }
