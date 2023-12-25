@@ -3,7 +3,6 @@ use uuid::Uuid;
 
 pub type Mileage = u32;
 
-#[derive(Clone)]
 pub struct MaintenanceItem {
     id: Uuid,
     label: String,
