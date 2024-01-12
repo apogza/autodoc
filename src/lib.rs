@@ -68,6 +68,12 @@ impl Vehicule {
         }
     }
 
+    pub fn remove_maintenance_item(&mut self, id: &Uuid) {
+        if !self.maintenance_items.contains_key(id) {
+            self.maintenance_items.remove(id);
+        }
+    }
+
     pub fn check_maintenance_items(&self) -> Option<Vec<Uuid>> {
         if self.maintenance_items.is_empty() {
             return None;
