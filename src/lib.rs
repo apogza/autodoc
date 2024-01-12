@@ -32,13 +32,6 @@ impl MaintenanceItem {
         self.installed_at = new_installed_at;
     }
 
-    pub fn copy(&mut self, other_item: &MaintenanceItem) {
-        self.label = other_item.label.clone();
-        self.installed_at = other_item.installed_at;
-        self.mileage = other_item.mileage;
-        self.id = other_item.id;
-    }
-
     pub fn get_label(&self) -> &str {
         return &self.label;
     }
